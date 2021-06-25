@@ -22,27 +22,42 @@ function updateSubtotal(product) {
 
 
 // where can I access to it?
-function calculateAll() {
 
-    const allProductos = document.queryAll(".product")
+// code in the following two lines is added just for testing purposes.
+// it runs when only iteration 1 is completed. at later point, it can be removed.
+// end of test
+
+// ITERATION 2
+
+const getPriceTowell = product.getElementByClassName(".price ")[1];
+console.dir(getPriceTowell);
+getPriceTowell.innerText = 12.50
+
+const inputElement = document.getElementByClassName(".quantity input ")
+const productElement = document.getElementByClassName(".product ")
+const buttonElement = document.getElementByClassName(".calculate-total ")
+
+
+function allSubtotal() {
+
+    const allProducts = document.queryAll(".product")
     for (let product of allProducts) {
         updateSubtotal(product)
     }
 }
-// code in the following two lines is added just for testing purposes.
-// it runs when only iteration 1 is completed. at later point, it can be removed.
-const singleProduct = document.querySelector('.product');
-updateSubtotal(singleProduct);
-// end of test
+const subTotalItems = allSubtotal()
 
-// ITERATION 2
-const allProducts = document.queryAll(".product")
-for (let singleproduct of allProducts) {
-    updateSubtotal(singleproduct)
-}
+buttonElement.addEventListener(click, () => {
+    console.dir(subTotalItems)
+})
 
 // ITERATION 3
-//... your code goes here
+function calculateAll(totalPrice) {
+    const totalPrice = 0
+    for (i = 0; i < totalPrice.length; i++) {
+        sum = +subtotalItems;
+    }
+}
 
 
 // ITERATION 4
