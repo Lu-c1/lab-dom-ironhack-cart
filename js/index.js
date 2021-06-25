@@ -31,7 +31,7 @@ function updateSubtotal(product) {
 
 const getPriceTowell = product.getElementByClassName(".price ")[1];
 console.dir(getPriceTowell);
-getPriceTowell.innerText = 12.50
+getPriceTowell.innerText = "12.50";
 
 const inputElement = document.getElementByClassName(".quantity input ")
 const productElement = document.getElementByClassName(".product ")
@@ -63,6 +63,17 @@ function calculateAll(totalPrice) {
 // ITERATION 4
 
 function removeProduct(event) {
+    const tbodyElement = document.getElementByTagName("tbody")
+    const RemoveButton = product.queryAll(".btn btn-remove")
+    const allRemoveButtons = document.queryAll(".btn btn-remove")
+
+    for (let RemoveButton of allRemoveButtons) {
+        RemoveButton.addEventListener("click", () => {
+            tbodyElement.removeChild(productElement)
+        })
+    }
+    currentTarget = productElement
+    const event = removeProduct()
     const target = event.currentTarget;
     console.log('The target in remove is:', target);
     //... your code goes here
@@ -71,8 +82,30 @@ function removeProduct(event) {
 // ITERATION 5
 
 function createProduct() {
-    //... your code goes here
+    const trElement = document.createElement("tr")
+    const tdElement = document.createElement("td")
+    const spanElementText = document.createElement("span")
+    const spanPriceValue = document.createElement(". price span")
+    const spanSubtotalValue = document.createElement(".subtotal span")
+    const inputElement = document.createElement("input")
+    const buttonElement = document.createElement("button")
+
+    buttonElement.addEventListener("click", () => {
+        console.log(subtotalElement)
+    })
 }
+
+buttonElement.innerText = Remove
+sapnElementPriceValue.innerText = 9.00
+spanElementText.innerText = "beach ball"
+spanSubtotalValue.value = 0
+
+td.Element.appendChild(spanElementText)
+td.Element.appendChild(spanPriceValue)
+td.Element.appendChild(spanSubtotalValue)
+td.Element.appendChild(inputElementText)
+td.Element.appendChild(buttonElementText)
+tr.Element.appendChild(tdElementText)
 
 window.addEventListener('load', () => {
     const calculatePricesBtn = document.getElementById('calculate');
